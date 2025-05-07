@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>blogs</title>
+    <title>Blok</title>
   </head>
   <body>
     <div class="main">
       <div class="navBar">
-        <h1><a href="#">blogs</a></h1>
-        <h2><a href="/new">New blogs</a></h2>
+        <h1><a href="#">Blok</a></h1>
+        <h2><a href="/new">New Bloks</a></h2>
       </div>
       <div class="mainblogs">
         <% blogss.forEach(blogs => { %>
@@ -28,14 +28,14 @@
           </div>
           <div class="blogsAction">
             <form action="/show/<%= blogs.id %>" method="get">
-              <button class="seeButton" type="submit">See blogs</button>
+              <button class="seeButton" type="submit">See Blok</button>
             </form>
             <form
               action="/delete/<%= blogs.id %>"
               method="post"
               onsubmit="return confirm('Are You Sure?')"
             >
-              <button class="deleteButton" type="submit">Delete blogs</button>
+              <button class="deleteButton" type="submit">Delete Blok</button>
             </form>
           </div>
         </div>
