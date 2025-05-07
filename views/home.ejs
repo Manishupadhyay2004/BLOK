@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>blogs</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="navBar">
+        <h1><a href="#">blogs</a></h1>
+        <h2><a href="/new">New blogs</a></h2>
+      </div>
+      <div class="mainblogs">
+        <% blogss.forEach(blogs => { %>
+        <div class="blogsCard">
+          <div class="blogsImage">
+            <img src="<%= blogs.image %>" alt="Picsum Images" />
+          </div>
+          <div class="blogsContent">
+            <h5><%= blogs.title %></h5>
+            <p><%= blogs.description %></p>
+          </div>
+          <div class="info">
+            <p><%= blogs.author %></p>
+            <p><%= blogs.created_on %></p>
+          </div>
+          <div class="blogsAction">
+            <form action="/show/<%= blogs.id %>" method="get">
+              <button class="seeButton" type="submit">See blogs</button>
+            </form>
+            <form
+              action="/delete/<%= blogs.id %>"
+              method="post"
+              onsubmit="return confirm('Are You Sure?')"
+            >
+              <button class="deleteButton" type="submit">Delete blogs</button>
+            </form>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= blogs.title %> | BeeLog</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="navBar">
+      <h1><a href="/">BeeLog</a></h1>
+      <h2><a href="/new">Create blogs</a></h2>
+    </div>
+
+    <div class="singleblogs">
+      <h1><%= blogs.title %></h1>
+      <img src="<%= blogs.image %>" alt="blogs Image" />
+      <p><%= blogs.description %></p>
+    </div>
+  </body>
+</html>
