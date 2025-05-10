@@ -28,8 +28,7 @@ Blok is a simple blogging platform built with Node.js, Express, and EJS. It allo
    ```bash
    npm start
    ```
-4. **Open your browser:**  
-   Navigate to [http://localhost:2000](http://localhost:2000)
+
 
 ## Project Structure 🗂
 
